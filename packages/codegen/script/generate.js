@@ -200,6 +200,7 @@ function generateComp(node, componentTree) {
     let propStr = ``
 
     _.forEach(node.props, (value, key) => {
+      if (key === 'style' || key === '__customStyle') return
       if (value?.type === 'JSExpression') {
         propStr += ` ${key}={${value.value.replace(/\$state/g, 'this.props.$state')}}`
         return
@@ -231,6 +232,12 @@ function generateComp(node, componentTree) {
         ? JSON.stringify(value)
         : (typeof value === 'string' ? `"${value}"` : value)}}`
     })
+
+    if (node.props['__customStyle']?.type === 'JSExpression' && node.props['__customStyle']?.value) {
+      propStr += ` style={Object.assign(${JSON.stringify(node.props.style ?? {})}, ${node.props['__customStyle']?.value.replace(/\$state/g, 'this.props.$state')})}`
+    } else {
+      propStr += ` style={${JSON.stringify(node.props.style ?? {})}}`
+    }
 
     return `<${node.componentName} ${propStr}>
         ${node.children.length > 0
