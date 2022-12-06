@@ -1,0 +1,53 @@
+{
+  "name": "lc-cli",
+  "version": "0.0.0",
+  "description": "低代码物料创建、调试一体化脚手架",
+  "keywords": [
+    "material",
+    "lowCode"
+  ],
+  "bin": {
+    "lc-cli": "bin/index.js"
+  },
+  "author": "wendyma111 <2641616227@qq.com>",
+  "homepage": "https://github.com/wendyma111/lowcode-jy#readme",
+  "license": "ISC",
+  "main": "lib/lc-cli.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendyma111/lowcode-jy.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/lc-cli.test.js",
+    "start": "tsc --watch",
+    "build": "rm -rf ./lib && tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/wendyma111/lowcode-jy/issues"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "babel-loader": "^9.1.0",
+    "babel-preset-react-app": "^10.0.1",
+    "chalk": "4.1.0",
+    "commander": "^9.4.1",
+    "css-loader": "^6.7.2",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.0.0",
+    "open": "^8.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

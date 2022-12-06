@@ -1,0 +1,43 @@
+{
+  "componentName": "Button",
+  "label": "按钮",
+  "screenShot": "",
+  "category": "元素",
+  "priority": 2,
+  "npmInfo": {
+    "npm": "template",
+    "version": "0.0.0"
+  },
+  "settings": {
+    "width": {
+      "settingName": "width",
+      "label": "宽度",
+      "type": "number",
+      "value": 200
+    },
+    "height": {
+      "settingName": "height",
+      "label": "高度",
+      "type": "number",
+      "value": 100
+    },
+    "background": {
+      "settingName": "background",
+      "label": "背景颜色",
+      "type": "color",
+      "value": "pink"
+    },
+    "color": {
+      "settingName": "color",
+      "label": "字体颜色",
+      "type": "color",
+      "value": "black"
+    },
+    "fontSize": {
+      "settingName": "fontSize",
+      "label": "字体大小",
+      "type": "number",
+      "value": 14
+    }
+  }
+}

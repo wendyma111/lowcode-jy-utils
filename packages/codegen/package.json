@@ -1,0 +1,39 @@
+{
+  "name": "codegen",
+  "version": "0.0.0",
+  "description": "根据schema生成代码包",
+  "author": "wendyma111 <2641616227@qq.com>",
+  "homepage": "https://github.com/wendyma111/lowcode-jy-utils#readme",
+  "license": "ISC",
+  "main": "lib/codegen.js",
+  "bin": {
+    "codegen": "script/cli.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendyma111/lowcode-jy-utils.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/codegen.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/wendyma111/lowcode-jy-utils/issues"
+  },
+  "dependencies": {
+    "chalk": "4.1.0",
+    "commander": "^9.4.1",
+    "fs-extra": "^11.0.0",
+    "lodash": "^4.17.21",
+    "prettier": "1.12.1"
+  }
+}
